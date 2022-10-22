@@ -1,9 +1,10 @@
 import React from 'react';
+import Hello from '../src/components/Hello'
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello TypeScript with React</h1>
+      <Hello name="Osman" label={12} />
     </div>
   );
 }
