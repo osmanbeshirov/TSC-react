@@ -67,7 +67,7 @@ const Hello: React.FunctionComponent<IProps> = ({ name, label }) => {
 
     return (
         <div>
-            <h1>Hello component {name}</h1>
+            {/* <h1>Hello component {name}</h1> */}
             <h2>My label is: {label}</h2>
             <input type="text" onChange={handleChaing} />
             <div ref={divRef} onClick={handleClick} style={{ backgroundColor: 'purple', display: 'inline-block' }}>Click me please...</div>
