@@ -9,7 +9,13 @@ interface IProps {
 }
 
 
+
 const SecondEx: React.FunctionComponent<IProps> = ({ name, surname, age = 24, isWorker, getTest }) => {
+
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        console.log(event.target.value)
+    }
+
     return (
         <div>
             <h1>{name}</h1>
@@ -17,11 +23,9 @@ const SecondEx: React.FunctionComponent<IProps> = ({ name, surname, age = 24, is
             <h1>{age}</h1>
             <h1>{isWorker ? 'Work' : "Don't work"}</h1>
 
-            <>
-                {getTest(false)}
-            </>
+            <input type="text" onChange={handleChange} />
         </div>
     )
 }
 
-export default SecondEx
+export default SecondEx;
