@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 interface IProps {
     name: string;
@@ -7,7 +7,6 @@ interface IProps {
     isWorker: boolean;
     getTest: (tested: boolean) => void;
 }
-
 
 
 const SecondEx: React.FunctionComponent<IProps> = ({ name, surname, age = 24, isWorker, getTest }) => {
@@ -22,6 +21,15 @@ const SecondEx: React.FunctionComponent<IProps> = ({ name, surname, age = 24, is
         alignItems: 'center',
         fontWeight: 800
     }
+
+    interface CountNode {
+        age: number
+    }
+
+   // const [count, setCount] = useState<CountNode>({ age: 34 }) //type inference
+    const [count, setCount] = useState<number>(35)
+
+
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         console.log(event.target.value)
