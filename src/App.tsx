@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <Hello name="Osman" label={12} onSmtHappen={(name) => console.log(name)} />
 
-      <SecondEx name='Kanan' surname='Akhmadzade' isWorker={true} getTest={(tested) => console.log(tested)} />
+      <SecondEx name='Kanan' surname='Akhmadzade'  isWorker={true} getTest={(tested) => console.log(tested)} />
 
     </div>
   );

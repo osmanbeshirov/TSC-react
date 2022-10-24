@@ -9,7 +9,7 @@ interface IProps {
 }
 
 
-const SecondEx: React.FunctionComponent<IProps> = ({ name, surname, age, isWorker, getTest }) => {
+const SecondEx: React.FunctionComponent<IProps> = ({ name, surname, age = 24, isWorker, getTest }) => {
     return (
         <div>
             <h1>{name}</h1>
