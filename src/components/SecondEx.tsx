@@ -12,11 +12,27 @@ interface IProps {
 
 const SecondEx: React.FunctionComponent<IProps> = ({ name, surname, age = 24, isWorker, getTest }) => {
 
+    const myStyle = {
+        marginTop: '50px',
+        width: '200px',
+        height: '60px',
+        backgroundColor: 'red',
+        display: "flex",
+        justifyContent: 'center',
+        alignItems: 'center',
+        fontWeight: 800
+    }
+
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         console.log(event.target.value)
     }
 
+    const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
+        console.log(event.target)
+    }
+
     return (
+
         <div>
             <h1>{name}</h1>
             <h1>{surname}</h1>
@@ -24,7 +40,9 @@ const SecondEx: React.FunctionComponent<IProps> = ({ name, surname, age = 24, is
             <h1>{isWorker ? 'Work' : "Don't work"}</h1>
 
             <input type="text" onChange={handleChange} />
-        </div>
+
+            <div style={myStyle} onClick={handleClick}>Click me... </div>
+        </div >
     )
 }
 
