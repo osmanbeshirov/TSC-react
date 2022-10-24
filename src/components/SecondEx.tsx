@@ -5,6 +5,7 @@ interface IProps {
     surname: string;
     age?: number;
     isWorker: boolean;
+    getTest: (tested: boolean) => void;  
 }
 
 
